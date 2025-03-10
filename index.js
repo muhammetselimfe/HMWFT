@@ -32,7 +32,7 @@ async function sendCryptoUpdate() {
 }
 
 // Command to manually trigger a crypto update
-bot.onText(/\/cryptoupdate/, async (msg) => {
+bot.onText(/\/fucked/, async (msg) => {
   const chatId = msg.chat.id;
   
   try {
@@ -81,7 +81,7 @@ bot.onText(/\/help/, (msg) => {
   const helpMessage = `
 *Crypto Price Bot Commands*
 
-/cryptoupdate - Trigger a cryptocurrency update to the channel
+/fucked - Trigger a cryptocurrency update to the channel
 /crypto [name] - Get information about a specific cryptocurrency (e.g., /crypto bitcoin)
 /trending - Show trending cryptocurrencies
 /list - Show the list of tracked cryptocurrencies

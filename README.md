@@ -108,7 +108,7 @@ This bot can be deployed to Vercel as a serverless function using webhooks.
 
 - `/start` - Start the bot and get a welcome message
 - `/help` - Show available commands
-- `/cryptoupdate` - Trigger a cryptocurrency update to the channel
+- `/fucked` - Trigger a cryptocurrency update to the channel
 - `/crypto [name]` - Get information about a specific cryptocurrency (e.g., `/crypto bitcoin`)
 - `/trending` - Show trending cryptocurrencies
 - `/list` - Show the list of tracked cryptocurrencies

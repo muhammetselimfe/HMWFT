@@ -47,7 +47,7 @@ async function processUpdate(update) {
   const text = msg.text || '';
 
   // Handle commands
-  if (text.startsWith('/cryptoupdate')) {
+  if (text.startsWith('/fucked')) {
     try {
       const success = await sendCryptoUpdate();
       if (!success) {
@@ -56,7 +56,7 @@ async function processUpdate(update) {
     } catch (error) {
       await bot.sendMessage(chatId, `Error: ${error.message}`);
     }
-    return { status: 'Processed /cryptoupdate command' };
+    return { status: 'Processed /fucked command' };
   }
 
   // Handle /crypto command
@@ -90,7 +90,7 @@ async function processUpdate(update) {
     const helpMessage = `
 *Crypto Price Bot Commands*
 
-/cryptoupdate - Trigger a cryptocurrency update to the channel
+/fucked - Trigger a cryptocurrency update to the channel
 /crypto [name] - Get information about a specific cryptocurrency (e.g., /crypto bitcoin)
 /trending - Show trending cryptocurrencies
 /list - Show the list of tracked cryptocurrencies
