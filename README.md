@@ -90,15 +90,19 @@ This bot can be deployed to Vercel as a serverless function using webhooks.
    - `BOT_TOKEN`: Your Telegram bot token
    - `CHANNEL_ID`: Your Telegram channel ID
 
-5. After deployment, set the webhook URL:
+5. After deployment, set the webhook URL by visiting:
    ```
-   npm run webhook:set your-vercel-deployment-url.vercel.app
+   https://your-vercel-deployment-url.vercel.app/api/setup
    ```
 
-   Or you can set it manually by visiting:
+   This will automatically configure your bot to receive messages through the webhook.
+
+   If the above doesn't work, you can specify the URL explicitly:
    ```
-   https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=https://your-vercel-deployment-url.vercel.app/api/webhook
+   https://your-vercel-deployment-url.vercel.app/api/setup?url=your-vercel-deployment-url.vercel.app
    ```
+
+   You should see a success message if the webhook was set correctly.
 
 ## Bot Commands
 
