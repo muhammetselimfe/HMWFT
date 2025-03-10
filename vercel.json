@@ -11,5 +11,7 @@
       "src": "/(.*)",
       "dest": "/api/webhook.js"
     }
-  ]
+  ],
+  "buildCommand": "npm run vercel-build",
+  "postbuild": "node scripts/setWebhook.js $VERCEL_URL"
 } 
