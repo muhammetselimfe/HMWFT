@@ -55,7 +55,7 @@ A Telegram bot that fetches cryptocurrency prices and sends updates to a Telegra
 4. Visit `https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates`
 5. Look for the `chat` object and find the `id` field (it will be a negative number for channels)
 
-## Running the Bot
+## Running the Bot Locally
 
 Start the bot with:
 ```
@@ -66,6 +66,39 @@ For development with auto-restart on file changes:
 ```
 npm run dev
 ```
+
+## Deploying to Vercel
+
+This bot can be deployed to Vercel as a serverless function using webhooks.
+
+1. Install the Vercel CLI:
+   ```
+   npm install -g vercel
+   ```
+
+2. Login to Vercel:
+   ```
+   vercel login
+   ```
+
+3. Deploy to Vercel:
+   ```
+   vercel
+   ```
+
+4. Set environment variables in the Vercel dashboard:
+   - `BOT_TOKEN`: Your Telegram bot token
+   - `CHANNEL_ID`: Your Telegram channel ID
+
+5. After deployment, set the webhook URL:
+   ```
+   npm run webhook:set your-vercel-deployment-url.vercel.app
+   ```
+
+   Or you can set it manually by visiting:
+   ```
+   https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=https://your-vercel-deployment-url.vercel.app/api/webhook
+   ```
 
 ## Bot Commands
 
@@ -78,7 +111,7 @@ npm run dev
 
 ## Customizing Tracked Cryptocurrencies
 
-To modify the list of tracked cryptocurrencies, edit the `cryptoList` array in `index.js`. The names should match the IDs used by the CoinGecko API.
+To modify the list of tracked cryptocurrencies, edit the `DEFAULT_CRYPTO_LIST` array in `config.js`. The names should match the IDs used by the CoinGecko API.
 
 ## License
 

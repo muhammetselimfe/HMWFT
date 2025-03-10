@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "webhook:set": "node scripts/setWebhook.js",
+    "vercel-build": "echo 'Build completed'"
   },
   "dependencies": {
     "axios": "^1.6.2",
@@ -15,5 +17,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 } 
