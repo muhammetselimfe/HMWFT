@@ -11,7 +11,7 @@
 function formatCryptoMessage(cryptoData, cryptoList) {
   if (!cryptoData) return 'Failed to fetch cryptocurrency data.';
   
-  let message = '🚀 *Cryptocurrency Price Update* 🚀\n\n';
+  let message = '🚀 We Fucked So Good Today 🚀\n\n';
   
   for (const crypto of cryptoList) {
     if (cryptoData[crypto]) {
